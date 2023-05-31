@@ -63,6 +63,7 @@ int main()
 		cout << adder(1, 3) << endl;
 		cout << adder(1.5, 3.7) << endl;
 		cout << adder(Point(3,4), Point(7,9)) << endl; // 함수의 호출문에서도 임시객체 생성이 가능하다
+		// 단, Point 클래스 안에서 () 오버로딩은 아직 안됐으므로 Point 클래스 객체는 단독으로 사용은 불가능하다
 	}
 	return 0;
 }
