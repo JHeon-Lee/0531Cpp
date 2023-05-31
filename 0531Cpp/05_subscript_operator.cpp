@@ -61,7 +61,7 @@ int main()
 	cout << arr[1] << endl;
 	cout << arr[2] << endl;
 	cout << arr[3] << endl;
-	cout << arr[4] << endl; // 배열의 크기에 대한 정보가 없음, 안전하지않음 --> [] 오버로딩
+	cout << arr[4] << endl; // 배열의 크기에 대한 정보가 없음, 안전하지않음
 
 	list[0] = 1;
 	list[1] = 1;
