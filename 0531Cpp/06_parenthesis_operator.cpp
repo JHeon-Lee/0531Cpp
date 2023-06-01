@@ -42,7 +42,7 @@ public:
 	{
 		return n1 + n2;
 	}
-	Point operator()(const Point& n1, const Point& n2)
+	Point operator()(const Point& n1, const Point& n2) // Point 클래스에서 오버로딩 해놔서 사용 가능
 	{
 		return n1 + n2;
 	}
