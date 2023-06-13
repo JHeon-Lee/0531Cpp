@@ -5,7 +5,7 @@ using namespace std;
 
 // []
 
-class IntArray // ¹è¿­ Å¬·¡½º¸¦ ¸¸µé¾î¼­ ¹üÀ§ Á¦ÇÑÀ» ¸¸µé¾îÁÖ±âµµ ÇÔ
+class IntArray // ë°°ì—´ í´ë˜ìŠ¤ë¥¼ ë§Œë“¤ì–´ì„œ ë²”ìœ„ ì œí•œì„ ë§Œë“¤ì–´ì£¼ê¸°ë„ í•¨
 {
 public:
 	int Get(int index) { return list[index]; }
@@ -15,26 +15,26 @@ public:
 
 	int& operator[](int index)
 	{
-		// °æ°è¹üÀ§ Ã¼Å©
-		if (index < 0 || index > 10) // ¼Óµµ´Â ´ë½Å ´À¸².
+		// ê²½ê³„ë²”ìœ„ ì²´í¬
+		if (index < 0 || index > 10) // ì†ë„ëŠ” ëŒ€ì‹  ëŠë¦¼.
 		{
 			cout << "Array index is out of bound exception" << endl;
 		}
 
-		assert(index >= 0); // ¾Æ¿¹ ÇÁ·Î±×·¥À» ÅÍ¶ß¸®°í ½ÍÀ»¶§. () ¾ÈÀÌ false ¸é ÅÍÁü
+		assert(index >= 0); // ì•„ì˜ˆ í”„ë¡œê·¸ë¨ì„ í„°ëœ¨ë¦¬ê³  ì‹¶ì„ë•Œ. () ì•ˆì´ false ë©´ í„°ì§
 
 		return list[index];
 	}
 
 private:
-	int list[3];
+	int list[5];
 };
 
 int main()
 {
 	int arr1[3] = { 1,2,3 };
 	//cout << arr1[-1] << endl;
-	//cout << arr1[3] << endl; --> ÄÄÆÄÀÏ·¯¿¡ µû¶ó ¾²·¹±â °ªÀ¸·Î ³ª¿À´Â °æ¿ìµµ ÀÖ´Ù.
+	//cout << arr1[3] << endl; --> ì»´íŒŒì¼ëŸ¬ì— ë”°ë¼ ì“°ë ˆê¸° ê°’ìœ¼ë¡œ ë‚˜ì˜¤ëŠ” ê²½ìš°ë„ ìˆë‹¤.
 
 	IntArray list;
 
@@ -48,25 +48,32 @@ int main()
 	cout << list.Get(1) << endl;
 	cout << list.Get(2) << endl;
 	cout << list.Get(3) << endl;
-	cout << list.Get(4) << endl; // ¹ø°Å·Î¿ò, ¹è¿­ÀÇ ÇüÅÂ°¡ ¾Æ´Ô
+	cout << list.Get(4) << endl; // ë²ˆê±°ë¡œì›€, ë°°ì—´ì˜ í˜•íƒœê°€ ì•„ë‹˜
 
 	auto arr = list.GetList();
-	arr[0] = 1;
-	arr[1] = 2;
-	arr[2] = 3;
-	arr[3] = 4;
-	arr[4] = 5;
+	arr[0] = 6;
+	arr[1] = 7;
+	arr[2] = 8;
+	arr[3] = 9;
+	arr[4] = 10;
 
 	cout << arr[0] << endl;
 	cout << arr[1] << endl;
 	cout << arr[2] << endl;
 	cout << arr[3] << endl;
-	cout << arr[4] << endl; // ¹è¿­ÀÇ Å©±â¿¡ ´ëÇÑ Á¤º¸°¡ ¾øÀ½, ¾ÈÀüÇÏÁö¾ÊÀ½
+	cout << arr[4] << endl; // ë°°ì—´ì˜ í¬ê¸°ì— ëŒ€í•œ ì •ë³´ê°€ ì—†ìŒ, ì•ˆì „í•˜ì§€ì•ŠìŒ
 
-	list[0] = 1;
-	list[1] = 1;
-	list[2] = 1;
-	list[3] = 1;
+	list[0] = 11;
+	list[1] = 12;
+	list[2] = 13;
+	list[3] = 14;
+	list[4] = 15;
+
+	cout << list.Get(0) << endl;
+	cout << list.Get(1) << endl;
+	cout << list.Get(2) << endl;
+	cout << list.Get(3) << endl;
+	cout << list.Get(4) << endl;
 
 	return 0;
 }
